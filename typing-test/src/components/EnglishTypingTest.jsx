@@ -1,5 +1,6 @@
 // src/components/EnglishTypingTest.jsx
 import React, { useState, useEffect } from 'react';
+import Keyboard from './Keyboard';
 
 const EnglishTypingTest = ({ setResult }) => {
   const sampleTexts = [
@@ -7,7 +8,7 @@ const EnglishTypingTest = ({ setResult }) => {
     "A journey of a thousand miles begins with a single step. This proverb emphasizes the importance of taking the initial action when pursuing any significant goal or undertaking. Often, the thought of a long journey can be daunting, but it is essential to remember that every great achievement starts with that first, sometimes difficult, step towards the desired destination, fostering perseverance and determination.",
     "To be or not to be, that is the question. This famous line from Shakespeare's Hamlet encapsulates the essence of existential contemplation. It reflects the struggle between existence and non-existence, the fear of the unknown, and the desire for meaning in life. Hamlet ponders the value of enduring suffering versus the uncertainty of what comes after life, a dilemma faced by many throughout history.",
     "All that glitters is not gold. This saying warns us that not everything that appears valuable or attractive on the surface truly possesses worth. It serves as a reminder to look beyond appearances and seek deeper truths. Often, superficial beauty can be deceiving, masking underlying flaws or emptiness, encouraging us to value substance over style and to approach life with discernment and wisdom.",
-     "Actions speak louder than words. This adage conveys the idea that what people do is far more significant than what they say. While words can be persuasive and charming, it is our actions that reveal our true intentions and beliefs. Therefore, one should strive to align their behavior with their promises, as integrity and authenticity are measured by the choices we make in our daily lives."
+    "Actions speak louder than words. This adage conveys the idea that what people do is far more significant than what they say. While words can be persuasive and charming, it is our actions that reveal our true intentions and beliefs. Therefore, one should strive to align their behavior with their promises, as integrity and authenticity are measured by the choices we make in our daily lives."
   ];
 
   const [inputText, setInputText] = useState('');
@@ -107,6 +108,8 @@ const EnglishTypingTest = ({ setResult }) => {
             cols="50"
             disabled={isTestComplete}
           />
+          <Keyboard /> 
+          {/* Render the keyboard */}
           <p>Time: {timeTaken ? `${timeTaken.toFixed(2)} seconds` : 'Start typing to track time!'}</p>
           <p>Accuracy: {accuracy}%</p>
         </>
@@ -122,4 +125,5 @@ const EnglishTypingTest = ({ setResult }) => {
 };
 
 export default EnglishTypingTest;
+
 
