@@ -174,3 +174,47 @@ nav button{
   margin: 2px;
 }
 }
+
+.typing-test {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.keyboard-image {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.keyboard-image img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  textarea {
+    font-size: 14px;
+  }
+
+  .keyboard-image img {
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  textarea {
+    font-size: 12px;
+  }
+
+  .keyboard-image img {
+    max-width: 300px;
+  }
+}

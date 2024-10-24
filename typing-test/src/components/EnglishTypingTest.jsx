@@ -1,6 +1,6 @@
 // src/components/EnglishTypingTest.jsx
 import React, { useState, useEffect } from 'react';
-import Keyboard from './Keyboard';
+
 
 const EnglishTypingTest = ({ setResult }) => {
   const sampleTexts = [
@@ -108,7 +108,10 @@ const EnglishTypingTest = ({ setResult }) => {
             cols="50"
             disabled={isTestComplete}
           />
-          <Keyboard /> 
+           <div className="keyboard-image">
+            {/* Add keyboard image */}
+            <img src="https://3.imimg.com/data3/XX/RB/MY-11912503/typing-practice-500x500.gif" alt="Keyboard" />
+          </div>
           {/* Render the keyboard */}
           <p>Time: {timeTaken ? `${timeTaken.toFixed(2)} seconds` : 'Start typing to track time!'}</p>
           <p>Accuracy: {accuracy}%</p>

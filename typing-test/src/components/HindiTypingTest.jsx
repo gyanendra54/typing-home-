@@ -1,18 +1,18 @@
 // src/components/HindiTypingTest.jsx
 import React, { useState, useEffect } from 'react';
 
-const HindiTypingTest = ({ setResult }) => {
-  const sampleTexts = [
-    "काला घोड़ा तेजी से दौड़ता है। यह घोड़ा बहुत ही तेज और चंचल है। इसकी काली चमड़ी और लंबे पैर इसे दौड़ने में मदद करते हैं। लोग इसे देखकर आश्चर्यचकित होते हैं। इसकी सुंदरता और गति ने इसे एक खास पहचान दिलाई है। यह घोड़ा हमेशा आगे बढ़ने की कोशिश करता है।",
-    "एक हजार मील की यात्रा एक कदम से शुरू होती है। यह कहावत हमें यह सिखाती है कि किसी भी बड़े कार्य की शुरुआत छोटी-छोटी कदमों से होती है। हमें कभी भी हार नहीं माननी चाहिए और निरंतर प्रयास करते रहना चाहिए। हर कदम हमें हमारे लक्ष्य के करीब लाता है।",
-    "सभी चमकने वाली चीजें सोना नहीं होती। यह हमें यह सिखाता है कि जो चीजें बाहर से खूबसूरत लगती हैं, वे हमेशा अंदर से भी वैसी नहीं होतीं। हमें बाहरी दिखावे पर नहीं, बल्कि किसी की असली पहचान और गुणों पर ध्यान देना चाहिए। सत्य और ईमानदारी का महत्व हमेशा सर्वोच्च होता है।",
-    "क्रिया शब्दों से अधिक जोर से बोलती है। जब हम कुछ करते हैं, तो वह हमारे शब्दों से अधिक महत्वपूर्ण होता है। शब्दों की शक्ति से ज्यादा, हमारे कार्यों की प्रभावशीलता होती है। इसलिए, हमें अपने कार्यों को सही तरीके से करना चाहिए और उन्हें शब्दों के माध्यम से नहीं, बल्कि उनके परिणामों से समझाना चाहिए।",
-    "अच्छा समय हमेशा लंबा नहीं रहता। यह हमें यह सिखाता है कि हमें हर पल का महत्व समझना चाहिए और उसे पूरी तरह से जीना चाहिए। सुख और दुख दोनों ही क्षणिक होते हैं। हमें कठिन समय में धैर्य रखना चाहिए और अच्छे समय का आनंद लेना चाहिए। जीवन का हर पल अनमोल है।"
-  ];
+const sampleTexts = [
+  "काला घोड़ा तेजी से दौड़ता है। यह घोड़ा बहुत ही तेज और चंचल है। इसकी काली चमड़ी और लंबे पैर इसे दौड़ने में मदद करते हैं। लोग इसे देखकर आश्चर्यचकित होते हैं। इसकी सुंदरता और गति ने इसे एक खास पहचान दिलाई है। यह घोड़ा हमेशा आगे बढ़ने की कोशिश करता है।",
+  "एक हजार मील की यात्रा एक कदम से शुरू होती है। यह कहावत हमें यह सिखाती है कि किसी भी बड़े कार्य की शुरुआत छोटी-छोटी कदमों से होती है। हमें कभी भी हार नहीं माननी चाहिए और निरंतर प्रयास करते रहना चाहिए। हर कदम हमें हमारे लक्ष्य के करीब लाता है।",
+  "सभी चमकने वाली चीजें सोना नहीं होती। यह हमें यह सिखाता है कि जो चीजें बाहर से खूबसूरत लगती हैं, वे हमेशा अंदर से भी वैसी नहीं होतीं। हमें बाहरी दिखावे पर नहीं, बल्कि किसी की असली पहचान और गुणों पर ध्यान देना चाहिए। सत्य और ईमानदारी का महत्व हमेशा सर्वोच्च होता है।",
+  "क्रिया शब्दों से अधिक जोर से बोलती है। जब हम कुछ करते हैं, तो वह हमारे शब्दों से अधिक महत्वपूर्ण होता है। शब्दों की शक्ति से ज्यादा, हमारे कार्यों की प्रभावशीलता होती है। इसलिए, हमें अपने कार्यों को सही तरीके से करना चाहिए और उन्हें शब्दों के माध्यम से नहीं, बल्कि उनके परिणामों से समझाना चाहिए।",
+  "अच्छा समय हमेशा लंबा नहीं रहता। यह हमें यह सिखाता है कि हमें हर पल का महत्व समझना चाहिए और उसे पूरी तरह से जीना चाहिए। सुख और दुख दोनों ही क्षणिक होते हैं। हमें कठिन समय में धैर्य रखना चाहिए और अच्छे समय का आनंद लेना चाहिए। जीवन का हर पल अनमोल है।"
+];
 
+const HindiTypingTest = ({ setResult }) => {
   const [inputText, setInputText] = useState('');
   const [startTime, setStartTime] = useState(null);
-  const [timeTaken, setTimeTaken] = useState(0); // Initialize to 0
+  const [timeTaken, setTimeTaken] = useState(0);
   const [isTestComplete, setIsTestComplete] = useState(false);
   const [accuracy, setAccuracy] = useState(0);
   const [currentSampleText, setCurrentSampleText] = useState(sampleTexts[0]);
@@ -26,9 +26,11 @@ const HindiTypingTest = ({ setResult }) => {
     if (inputText === currentSampleText) {
       const endTime = new Date().getTime();
       setIsTestComplete(true);
-      setResult(((currentSampleText.split(' ').length / (timeTaken / 60)).toFixed(2)));
+      const timeDiffInMinutes = (endTime - startTime) / 60000;
+      const wordsPerMinute = (currentSampleText.split(' ').length / timeDiffInMinutes).toFixed(2);
+      setResult({ wpm: wordsPerMinute, accuracy });
     }
-  }, [inputText, currentSampleText, timeTaken, setResult]);
+  }, [inputText, currentSampleText, startTime, setResult, accuracy]);
 
   // Use interval to calculate real-time elapsed while typing
   useEffect(() => {
@@ -37,7 +39,7 @@ const HindiTypingTest = ({ setResult }) => {
       interval = setInterval(() => {
         const currentTime = new Date().getTime();
         setTimeTaken((currentTime - startTime) / 1000); // Update the time in seconds
-      }, 100); // Update every 100ms for smoother display
+      }, 100);
     } else {
       clearInterval(interval);
     }
@@ -45,24 +47,20 @@ const HindiTypingTest = ({ setResult }) => {
   }, [startTime, isTestComplete]);
 
   const handleInputChange = (e) => {
+    const typedText = e.target.value;
+
     if (!startTime) {
       setStartTime(new Date().getTime());
     }
-    setInputText(e.target.value);
-    calculateAccuracy(e.target.value);
+
+    setInputText(typedText);
+    calculateAccuracy(typedText);
   };
 
   const calculateAccuracy = (typedText) => {
-    const totalChars = typedText.length;
-    let correctChars = 0;
-
-    // Count correct characters
-    for (let i = 0; i < totalChars; i++) {
-      if (typedText[i] === currentSampleText[i]) {
-        correctChars++;
-      }
-    }
-
+    const totalChars = currentSampleText.length;
+    const correctChars = typedText.split('').filter((char, index) => char === currentSampleText[index]).length;
+    
     // Calculate accuracy
     const accuracyPercentage = (correctChars / totalChars) * 100;
     setAccuracy(accuracyPercentage.toFixed(2));
@@ -95,7 +93,7 @@ const HindiTypingTest = ({ setResult }) => {
 
   return (
     <div className="typing-test">
-      <h2>Hindi Typing Test</h2>
+      <h2>हिंदी टाइपिंग टेस्ट</h2>
       <p>{renderColoredText()}</p>
       {!isTestComplete ? (
         <>
@@ -107,9 +105,14 @@ const HindiTypingTest = ({ setResult }) => {
             cols="50"
             disabled={isTestComplete}
           />
+           <div className="keyboard-image">
+            {/* Add keyboard image */}
+            <img src="https://www.typingpoint.com/img/hindi.png" alt="Keyboard" />
+          </div>
           <p>Time: {timeTaken ? `${timeTaken.toFixed(2)} seconds` : 'Start typing to track time!'}</p>
           <p>Accuracy: {accuracy}%</p>
         </>
+        
       ) : (
         <>
           <p>Test complete! Time taken: {timeTaken.toFixed(2)} seconds</p>
@@ -122,4 +125,6 @@ const HindiTypingTest = ({ setResult }) => {
 };
 
 export default HindiTypingTest;
+
+
 
