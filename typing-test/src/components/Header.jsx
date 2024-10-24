@@ -1,6 +1,6 @@
 // src/components/Header.jsx
 import React from 'react';
-import TypingTestLogo from '../assets/typing.avif'; // Make sure the image path is correct
+ // Make sure the image path is correct
 import './Header.css'; // Import the CSS specific to the header
 
 const Header = () => {
