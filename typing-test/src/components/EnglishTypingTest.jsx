@@ -3,11 +3,11 @@ import React, { useState, useEffect } from 'react';
 
 const EnglishTypingTest = ({ setResult }) => {
   const sampleTexts = [
-    "The quick brown fox jumps over the lazy dog.",
-    "A journey of a thousand miles begins with a single step.",
-    "To be or not to be, that is the question.",
-    "All that glitters is not gold.",
-    "Actions speak louder than words."
+    "The quick brown fox jumps over the lazy dog. This famous sentence is often used in typing exercises because it contains every letter of the English alphabet. The agile fox, with its sleek fur and sharp senses, effortlessly leaps over the sleeping dog, which lies comfortably on the grass, oblivious to the world around it, highlighting the contrast between activity and rest.",
+    "A journey of a thousand miles begins with a single step. This proverb emphasizes the importance of taking the initial action when pursuing any significant goal or undertaking. Often, the thought of a long journey can be daunting, but it is essential to remember that every great achievement starts with that first, sometimes difficult, step towards the desired destination, fostering perseverance and determination.",
+    "To be or not to be, that is the question. This famous line from Shakespeare's Hamlet encapsulates the essence of existential contemplation. It reflects the struggle between existence and non-existence, the fear of the unknown, and the desire for meaning in life. Hamlet ponders the value of enduring suffering versus the uncertainty of what comes after life, a dilemma faced by many throughout history.",
+    "All that glitters is not gold. This saying warns us that not everything that appears valuable or attractive on the surface truly possesses worth. It serves as a reminder to look beyond appearances and seek deeper truths. Often, superficial beauty can be deceiving, masking underlying flaws or emptiness, encouraging us to value substance over style and to approach life with discernment and wisdom.",
+     "Actions speak louder than words. This adage conveys the idea that what people do is far more significant than what they say. While words can be persuasive and charming, it is our actions that reveal our true intentions and beliefs. Therefore, one should strive to align their behavior with their promises, as integrity and authenticity are measured by the choices we make in our daily lives."
   ];
 
   const [inputText, setInputText] = useState('');
